@@ -1,4 +1,4 @@
-const char filename[120] = "/home/nikolas/Desktop/example/icoFoamT3/thermochimica/data/JRC-2021-fluoride-noSUBM.dat";
+const char filename[120] = "/home/pcname/Desktop/example/location/thermochimica/data/database.dat";
 
 std::vector<double> molFrac_KF;
 std::vector<double> partialPressure_KF;
@@ -82,7 +82,7 @@ double moleFraction_CsF;
 
 GetOutputMolSpeciesPhase(phaseName5, speciesName3, &moleFraction_CsF, &info);
 molFrac_CsF.push_back(moleFraction_CsF);
-//printf("%s in %s: %e\n\n", speciesName3, phaseName5, moleFraction_CsF); //fala CsF mol fraction para cada elemento i
+printf("%s in %s: %e\n\n", speciesName3, phaseName5, moleFraction_CsF); //fala CsF mol fraction para cada elemento i
 
 Info << "size molFrac_CsF: " << molFrac_CsF[i] << '\n'; //why is this vector size 1?
 
