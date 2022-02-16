@@ -1,0 +1,12 @@
+EXE_INC = \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude
+
+EXE_LIBS = \
+    -lfiniteVolume \
+    -lmeshTools \
+    -lgfortran \
+    -llapack \
+    -lblas \
+    $(HOME)/Desktop/example/icoFoamThermochimica/libthermoc.a \
+    $(HOME)/Desktop/example/icoFoamThermochimica/libthermochimica.a

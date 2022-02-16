@@ -1,0 +1,9 @@
+Install OpenFOAM V9
+
+To compile this code you need:
+
+1) git clone https://github.com/ORNL-CEES/thermochimica
+2) Compile Thermochimica as a folder inside this solver folder
+3) Modify location of libthermoc.a and libthermochimica.a libraries in file "options" inside folder "Make"
+4) Change ThermochimicaCalc.H according to your own chemistry calculation
+
