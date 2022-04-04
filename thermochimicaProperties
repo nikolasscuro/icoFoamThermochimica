@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      thermochimicaProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//Molten Salt Mixture 
+// Mass_i = Atomic Number of Desired Element_i
+// MolFraction_i = Mol Fraction of desired Mass_i
+//** Elements chosen need to be available in database
+
+
+// 0.25 Li + 0.750001 Cs + 1.00 F (0.25 LiF + 0.750001 CsF)	Note: 0.000001 in Cs just for Thermochimica Stability
+
+Mass1		3; //Li
+MolFraction1	0.25;
+
+Mass2		55; //Cs
+MolFraction2	0.750001;
+
+Mass3		9;  //F
+MolFraction3	1.00;
+
+
+// ************************************************************************* //
