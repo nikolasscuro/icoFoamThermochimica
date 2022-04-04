@@ -8,5 +8,5 @@ EXE_LIBS = \
     -lgfortran \
     -llapack \
     -lblas \
-    $(HOME)/Desktop/example/icoFoamThermochimica/libthermoc.a \
-    $(HOME)/Desktop/example/icoFoamThermochimica/libthermochimica.a
+    $(HOME)/Documents/OFTC/Make/libthermoc.a \
+    $(HOME)/Documents/OFTC/Make/libthermochimica.a
