@@ -1,4 +1,3 @@
-#include <string>
 #define FORTRAN_CALL(name) name##_
 
 extern "C"

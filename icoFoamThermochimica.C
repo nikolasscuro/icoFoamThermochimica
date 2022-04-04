@@ -38,7 +38,7 @@ Description
 #include <dirent.h>
 #include <experimental/filesystem>
 #include <iomanip>
-//#include <string>
+#include <string>
 #include "Thermochimica.h"
 
 
@@ -56,6 +56,7 @@ int main(int argc, char *argv[])
     pisoControl piso(mesh);
 
     #include "createFields.H"
+    #include "createFieldsThermochimica.H"
     #include "initContinuityErrs.H"
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -136,8 +137,7 @@ int main(int argc, char *argv[])
             );
 
            TEqn.solve();
-           Info << "size T: " << T.size() << '\n'; //corresponds to i
-           T.correctBoundaryConditions();
+           T.correctBoundaryConditions(); //update internalField   nonuniform List<scalar>
 
            #include "ThermochimicaCoupling.H"
 

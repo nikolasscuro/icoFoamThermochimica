@@ -1,19 +1,20 @@
-scalar totalTime = mesh.time().value();
-scalar dt = mesh.time().deltaTValue();
-std::vector<double> AveTempMatrix{};
+//scalar totalTime = mesh.time().value();
+//scalar dt = mesh.time().deltaTValue();
 
-forAll(Tave, i)
+forAll(T, i)
 {
-	Tave[i] = (totalTime * Tave[i] + dt * T[i] ) / (totalTime + dt);
-	Info << endl << "Element number #: " << i << endl;
-	Info<< Tave[i] << endl;
+	T[i];
+	Info << endl << "Cell N°: " << i << endl;
+	Info<< "Time = " << runTime.timeName() << endl;
+	Tave[i] = T[i];
 
-	AveTempMatrix.push_back(Tave[i]);
+	//AveTempMatrix.push_back(T[i]);
+	//Info <<  "Average Temperature = " << AveTempMatrix.at(i) << " K" << nl;
+   Info <<  "Temperature = " << T[i] << " K" << nl;
+	 Info <<  "Average Temperature = " << Tave[i] << " K" << nl;
 
-  Info << "size: " << AveTempMatrix.size() << '\n'; //corresponds to i
-
-	Info << "Valor de temperatura na posicao " << i << " = " << AveTempMatrix.at(i) << endl << endl;
 
 	#include "ThermochimicaCalc.H"
-
+  //X.correctBoundaryConditions();
+//	C.correctBoundaryConditions();
 }

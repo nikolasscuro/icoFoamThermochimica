@@ -19,27 +19,10 @@ dimensionedScalar nu
     transportProperties.lookup("nu")
 );
 
-
 dimensionedScalar DT
 (
     "DT",
     transportProperties.lookup("DT")
-);
-
-
-dimensionedScalar T0("zero",dimensionSet(0, 0, 0, 1, 0, 0, 0),0);
-volScalarField Tave
-(
-    IOobject
-    (
-        "Tave",
-        runTime.timeName(),
-        mesh,
-        IOobject::NO_READ,
-        IOobject::AUTO_WRITE
-    ),
-    mesh,
-    T0
 );
 
 
@@ -90,11 +73,20 @@ volScalarField T
     mesh
 );
 
-// Cesium fluoride vapour Pressure
-
-// kinematic turbulent thermal thermal conductivity m2/s
-
-
+Info<< "Reading field T\n" << endl;
+volScalarField Tave
+(
+    IOobject
+    (
+        "Tave",
+        runTime.timeName(),
+        mesh,
+        IOobject::NO_READ,
+        IOobject::AUTO_WRITE
+    ),
+    mesh,
+    dimensionedScalar("", dimTemperature, 0)
+);
 
 
 #include "createPhi.H"
