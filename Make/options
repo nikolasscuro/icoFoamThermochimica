@@ -8,5 +8,5 @@ EXE_LIBS = \
     -lgfortran \
     -llapack \
     -lblas \
-    $(HOME)/Documents/OFTC/Make/libthermoc.a \
-    $(HOME)/Documents/OFTC/Make/libthermochimica.a
+    $(HOME)/Documents/OFTC/Make/libthermoc.a \       //Please, re adress location according to where you clone and compile
+    $(HOME)/Documents/OFTC/Make/libthermochimica.a   //Please, re adress location according to where you clone and compile
